@@ -62,13 +62,9 @@
     .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
     .nav-wrap{position:sticky;top:0;z-index:30;background:rgba(5,8,20,.7);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}
     .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{display:flex;align-items:center;gap:9px;min-width:max-content}
-    .kai-mark{position:relative;width:24px;height:28px;display:inline-block;flex:0 0 24px}
-    .kai-mark .k-stem{position:absolute;left:0;top:0;width:5px;height:28px;border-radius:1px;background:linear-gradient(180deg,#14c8ff 0%,#2d87ff 46%,#7840ff 100%);box-shadow:0 0 12px rgba(47,128,255,.18)}
-    .kai-mark .k-upper,.kai-mark .k-lower{position:absolute;left:5px;width:19px;height:6px;border-radius:1px;transform-origin:left center}
-    .kai-mark .k-upper{top:13px;transform:rotate(-48deg);background:linear-gradient(90deg,#247dff,#3c62ff)}
-    .kai-mark .k-lower{top:13px;transform:rotate(48deg);background:linear-gradient(90deg,#425eff,#7a3dff)}
-    .brand-word{font-size:22px;letter-spacing:.31em;font-weight:650;color:#f4f6ff;line-height:1;white-space:nowrap}
+    .brand{display:flex;align-items:center;gap:11px;min-width:max-content}
+    .kai-logo-mark{width:40px;height:44px;display:block;flex:0 0 40px;filter:drop-shadow(0 0 8px rgba(32,154,255,.16))}
+    .brand-word{font-size:20px;letter-spacing:.25em;font-weight:650;color:#f4f6ff;line-height:1;white-space:nowrap}
     .brand-copy{display:flex;align-items:center}
     .brand-tagline{display:none}
     .nav-links{display:flex;align-items:center;gap:30px;font-size:14px;color:#d4dcf0}
@@ -190,7 +186,7 @@
     }
     @media (max-width:680px){
       .hero-cinematic{min-height:700px}.hero-cinematic .hero-center{padding:82px 0 170px}.hero-cinematic .hero-copy{font-size:16px}.hex-a{left:-22%;width:220px}.hex-b{right:-48%;width:390px}.hex-c{display:none}.ticker-set{gap:38px;padding-right:38px}.tech-logo{font-size:13px}.ecosystem{padding:20px}.agent-mini{grid-template-columns:repeat(2,1fr)}
-      .container{width:min(100% - 28px,var(--max))}.nav{height:62px}.brand{gap:9px}.brand-word{font-size:16px;letter-spacing:.28em}.kai-mark{width:19px;height:23px;flex-basis:19px}.kai-mark .k-stem{height:23px}.kai-mark .k-upper,.kai-mark .k-lower{width:16px;height:5px;top:11px}
+      .container{width:min(100% - 28px,var(--max))}.nav{height:62px}.brand{gap:8px}.brand-word{font-size:15px;letter-spacing:.22em}.kai-logo-mark{width:30px;height:34px;flex-basis:30px}
       .hero{gap:20px;padding:54px 0}.hero p{font-size:17px}.hero-points{grid-template-columns:1fr}.hero-visual{min-height:420px}.sphere{width:290px}.sphere::before{width:360px;height:140px}.sphere::after{width:380px;height:140px}.sphere-core{font-size:92px}
       .float-card{width:178px;padding:13px}.float-card p{font-size:10px}.float-card .icon{width:34px;height:34px;font-size:16px}.fc1{top:0;left:-2%}.fc2{right:-2%;top:155px}.fc3{left:0;bottom:8px}
       .cards,.product-grid{grid-template-columns:1fr}.section{padding:78px 0}.ai-panel,.contact-box{padding:28px}.contact-box h2,.ai-panel h2{font-size:38px}.footer-inner{align-items:flex-start;flex-direction:column}
@@ -205,8 +201,27 @@
   <header class="nav-wrap">
     <div class="container nav">
       <a href="#home" class="brand" aria-label="KAI-TEQ home">
-        <span class="kai-mark" aria-hidden="true"><span class="k-stem"></span><span class="k-upper"></span><span class="k-lower"></span></span>
-        <span class="brand-copy"><span class="brand-word">AI-TEQ</span></span>
+        <svg class="kai-logo-mark" viewBox="0 0 72 80" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="hexOuter" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#20e0ff"/>
+              <stop offset=".48" stop-color="#2b8cff"/>
+              <stop offset="1" stop-color="#8a3dff"/>
+            </linearGradient>
+            <linearGradient id="hexInner" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#18dfff"/>
+              <stop offset=".52" stop-color="#3478ff"/>
+              <stop offset="1" stop-color="#a23dff"/>
+            </linearGradient>
+          </defs>
+          <!-- angular open hexagon -->
+          <path d="M36 5 L63 21 L52 28 L36 19 L20 28 L20 52 L36 61 L51 52 L62 59 L36 75 L8 59 L8 21 Z"
+                fill="none" stroke="url(#hexOuter)" stroke-width="9" stroke-linejoin="miter" stroke-linecap="butt"/>
+          <!-- inner K structure -->
+          <path d="M28 29 L28 52" fill="none" stroke="#21cfff" stroke-width="7" stroke-linecap="butt"/>
+          <path d="M33 41 L49 31 M33 41 L50 51" fill="none" stroke="url(#hexInner)" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter"/>
+        </svg>
+        <span class="brand-copy"><span class="brand-word">KAI-TEQ</span></span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#home">Home</a><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#products">Products</a><a href="#ai">AI & Automation</a><a href="#contact">Contact</a>
