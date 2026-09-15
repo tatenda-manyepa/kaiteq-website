@@ -62,14 +62,15 @@
     .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
     .nav-wrap{position:sticky;top:0;z-index:30;background:rgba(5,8,20,.7);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}
     .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{display:flex;align-items:center;gap:12px;min-width:max-content}
-    .mark{width:28px;height:34px;position:relative;display:inline-block}
-    .mark::before,.mark::after{content:"";position:absolute;left:0;border-radius:2px;background:linear-gradient(180deg,var(--cyan),var(--violet))}
-    .mark::before{width:6px;height:34px;top:0}
-    .mark::after{width:23px;height:6px;top:14px;transform:rotate(-43deg);transform-origin:left center}
-    .brand-word{font-size:22px;letter-spacing:.34em;font-weight:700}
-    .brand-sub{font-size:9px;letter-spacing:.22em;color:var(--cyan);margin-top:3px}
-    .brand-copy{display:flex;flex-direction:column}
+    .brand{display:flex;align-items:center;gap:9px;min-width:max-content}
+    .kai-mark{position:relative;width:24px;height:28px;display:inline-block;flex:0 0 24px}
+    .kai-mark .k-stem{position:absolute;left:0;top:0;width:5px;height:28px;border-radius:1px;background:linear-gradient(180deg,#14c8ff 0%,#2d87ff 46%,#7840ff 100%);box-shadow:0 0 12px rgba(47,128,255,.18)}
+    .kai-mark .k-upper,.kai-mark .k-lower{position:absolute;left:5px;width:19px;height:6px;border-radius:1px;transform-origin:left center}
+    .kai-mark .k-upper{top:13px;transform:rotate(-48deg);background:linear-gradient(90deg,#247dff,#3c62ff)}
+    .kai-mark .k-lower{top:13px;transform:rotate(48deg);background:linear-gradient(90deg,#425eff,#7a3dff)}
+    .brand-word{font-size:22px;letter-spacing:.31em;font-weight:650;color:#f4f6ff;line-height:1;white-space:nowrap}
+    .brand-copy{display:flex;align-items:center}
+    .brand-tagline{display:none}
     .nav-links{display:flex;align-items:center;gap:30px;font-size:14px;color:#d4dcf0}
     .nav-links a{position:relative;padding:28px 0}
     .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:17px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));transition:.25s}
@@ -148,8 +149,39 @@
     footer{border-top:1px solid rgba(255,255,255,.06);padding:34px 0 42px;color:#71809b;font-size:13px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px}
 
     .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+    /* Cinematic hero */
+    .hero-cinematic{position:relative;min-height:760px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center}
+    .hero-media{position:absolute;inset:0;z-index:-4;background:linear-gradient(135deg,#071127,#0b1c46 52%,#071127)}
+    .hero-media video{width:100%;height:100%;object-fit:cover;opacity:.62;filter:saturate(.72) contrast(1.08)}
+    .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,7,18,.56),rgba(5,16,49,.55) 48%,rgba(4,10,28,.92)),linear-gradient(90deg,rgba(3,8,20,.38),rgba(29,71,168,.16),rgba(3,8,20,.38))}
+    .hero-cinematic .hero-center{width:min(900px,calc(100% - 40px));margin:0 auto;text-align:center;padding:120px 0 180px;position:relative;z-index:3}
+    .hero-cinematic h1{font-size:clamp(54px,6vw,92px);line-height:.96;max-width:980px;margin:22px auto 24px}
+    .hero-cinematic .hero-copy{font-size:19px;line-height:1.65;color:#c0cce1;max-width:790px;margin:0 auto}
+    .hero-cinematic .hero-actions{justify-content:center}
+
+    .hero-brand-lockup{display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:24px}
+    .hero-brand-line{display:flex;align-items:center;gap:11px}
+    .hero-brand-word{font-size:28px;letter-spacing:.32em;font-weight:650;color:#f5f7ff;line-height:1}
+    .hero-k{transform:scale(1.12);transform-origin:center}
+    .hero-brand-tag{font-size:9px;letter-spacing:.26em;color:#12c8ff;text-transform:uppercase}
+    .hex{position:absolute;border:1.5px solid rgba(82,224,255,.75);clip-path:polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0 50%);opacity:.68;filter:drop-shadow(0 0 7px rgba(38,199,255,.2));animation:hexFloat 9s ease-in-out infinite}
+    .hex::after{content:"";position:absolute;inset:2px;background:rgba(28,88,188,.07);clip-path:inherit}
+    .hex-a{width:270px;height:310px;left:4%;top:18%}.hex-b{width:500px;height:575px;right:-5%;top:8%;animation-delay:-3s}.hex-c{width:150px;height:174px;left:27%;bottom:15%;animation-delay:-6s}
+    @keyframes hexFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+    .ticker-wrap{position:absolute;left:0;right:0;bottom:0;z-index:5;border-top:1px solid rgba(95,204,255,.16);border-bottom:1px solid rgba(95,204,255,.12);background:rgba(6,14,35,.58);backdrop-filter:blur(10px);overflow:hidden}
+    .ticker-label{text-align:center;font-size:9px;letter-spacing:.24em;color:#aebbd1;text-transform:uppercase;padding-top:12px}
+    .ticker{display:flex;width:max-content;animation:ticker 28s linear infinite;padding:17px 0 22px}
+    .ticker-set{display:flex;align-items:center;gap:68px;padding-right:68px}
+    .tech-logo{display:flex;align-items:center;gap:10px;white-space:nowrap;color:#e8efff;font-size:16px;font-weight:700;letter-spacing:.03em;opacity:.86}
+    .tech-logo span{width:28px;height:28px;border-radius:8px;border:1px solid rgba(66,205,255,.3);display:grid;place-items:center;color:#5edfff;font-size:12px;background:rgba(25,114,200,.08)}
+    @keyframes ticker{to{transform:translateX(-50%)}}
+    .intro-section{padding:105px 0 75px;background:radial-gradient(circle at 14% 35%,rgba(29,112,255,.10),transparent 28%)}
+    .intro-inner{text-align:center;max-width:860px;margin:auto}.intro-inner h2{font-size:clamp(38px,4.7vw,64px);line-height:1.04;letter-spacing:-.045em;margin:0 auto 20px}.intro-inner p{color:#9cadc8;font-size:18px;line-height:1.7}
+    .ecosystem{margin:54px auto 0;max-width:920px;border:1px solid rgba(68,160,255,.22);background:linear-gradient(180deg,rgba(12,27,57,.76),rgba(8,16,35,.72));border-radius:26px;padding:34px;box-shadow:var(--shadow)}
+    .eco-flow{display:grid;grid-template-columns:1fr 70px 1.15fr 70px 1.4fr;align-items:center;gap:10px}.eco-node{border:1px solid rgba(75,183,255,.25);background:rgba(6,15,34,.65);border-radius:17px;padding:20px 14px}.eco-node b{display:block;color:#eef5ff;margin-bottom:6px}.eco-node small{color:#7f91ae;line-height:1.4}.eco-manager{border-color:rgba(119,85,255,.55);box-shadow:0 0 35px rgba(104,68,255,.12)}.eco-arrow{color:#43d4ff;font-size:28px}.agent-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.agent-mini span{font-size:11px;padding:10px 6px;border-radius:10px;background:rgba(31,111,214,.11);border:1px solid rgba(74,172,255,.18);color:#c8d7ef}
 
     @media (max-width:1050px){
+      .eco-flow{grid-template-columns:1fr}.eco-arrow{transform:rotate(90deg)}
       .nav-links{display:none}.menu-btn{display:block}.nav-cta{display:none}
       .hero{grid-template-columns:1fr;padding-top:62px}.hero-visual{min-height:500px}.fc1{left:2%}.fc3{left:0}.fc2{right:0}
       .cards{grid-template-columns:repeat(2,1fr)}
@@ -157,7 +189,8 @@
       .product-grid{grid-template-columns:1fr 1fr}
     }
     @media (max-width:680px){
-      .container{width:min(100% - 28px,var(--max))}.nav{height:70px}.brand-word{font-size:18px}.brand-sub{font-size:8px}
+      .hero-cinematic{min-height:700px}.hero-cinematic .hero-center{padding:82px 0 170px}.hero-cinematic .hero-copy{font-size:16px}.hex-a{left:-22%;width:220px}.hex-b{right:-48%;width:390px}.hex-c{display:none}.ticker-set{gap:38px;padding-right:38px}.tech-logo{font-size:13px}.ecosystem{padding:20px}.agent-mini{grid-template-columns:repeat(2,1fr)}
+      .container{width:min(100% - 28px,var(--max))}.nav{height:62px}.brand{gap:9px}.brand-word{font-size:16px;letter-spacing:.28em}.kai-mark{width:19px;height:23px;flex-basis:19px}.kai-mark .k-stem{height:23px}.kai-mark .k-upper,.kai-mark .k-lower{width:16px;height:5px;top:11px}
       .hero{gap:20px;padding:54px 0}.hero p{font-size:17px}.hero-points{grid-template-columns:1fr}.hero-visual{min-height:420px}.sphere{width:290px}.sphere::before{width:360px;height:140px}.sphere::after{width:380px;height:140px}.sphere-core{font-size:92px}
       .float-card{width:178px;padding:13px}.float-card p{font-size:10px}.float-card .icon{width:34px;height:34px;font-size:16px}.fc1{top:0;left:-2%}.fc2{right:-2%;top:155px}.fc3{left:0;bottom:8px}
       .cards,.product-grid{grid-template-columns:1fr}.section{padding:78px 0}.ai-panel,.contact-box{padding:28px}.contact-box h2,.ai-panel h2{font-size:38px}.footer-inner{align-items:flex-start;flex-direction:column}
@@ -172,8 +205,8 @@
   <header class="nav-wrap">
     <div class="container nav">
       <a href="#home" class="brand" aria-label="KAI-TEQ home">
-        <span class="mark" aria-hidden="true"></span>
-        <span class="brand-copy"><span class="brand-word">KAI-TEQ</span><span class="brand-sub">INTELLIGENT SOLUTIONS</span></span>
+        <span class="kai-mark" aria-hidden="true"><span class="k-stem"></span><span class="k-upper"></span><span class="k-lower"></span></span>
+        <span class="brand-copy"><span class="brand-word">AI-TEQ</span></span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#home">Home</a><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#products">Products</a><a href="#ai">AI & Automation</a><a href="#contact">Contact</a>
@@ -184,30 +217,51 @@
   </header>
 
   <main>
-    <section class="container hero" id="home">
-      <div class="reveal visible">
-        <span class="eyebrow"><span class="dot"></span> Technology × People × Real Impact</span>
-        <h1>From Ideas to <span class="gradient-text">Impact.</span></h1>
-        <p>KAI-TEQ designs, builds and scales intelligent websites, applications, software and AI-powered workflows that help businesses operate smarter, move faster and grow with confidence.</p>
+    <section class="hero-cinematic" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <video autoplay muted loop playsinline poster="./assets/hero-poster.jpg">
+          <source src="./assets/kai-teq-hero.mp4" type="video/mp4">
+        </video>
+      </div>
+      <span class="hex hex-a" aria-hidden="true"></span>
+      <span class="hex hex-b" aria-hidden="true"></span>
+      <span class="hex hex-c" aria-hidden="true"></span>
+      <div class="hero-center reveal visible">
+        <span class="eyebrow"><span class="dot"></span> Intelligence built around your business</span>
+        <h1>From Ideas to <span class="gradient-text">Impact.</span><br>Build smarter. Scale what matters.</h1>
+        <p class="hero-copy">KAI-TEQ designs intelligent digital solutions and AI agent teams that help businesses automate repetitive work, connect operations and create more room for growth.</p>
         <div class="hero-actions">
-          <a class="primary-btn" href="#contact">Start a Project <span>→</span></a>
-          <a class="secondary-btn" href="#solutions">Explore Our Solutions</a>
-        </div>
-        <div class="hero-points">
-          <div class="point"><b>01</b><strong>Operate</strong><span>Everything connected</span></div>
-          <div class="point"><b>02</b><strong>Automate</strong><span>Less manual work</span></div>
-          <div class="point"><b>03</b><strong>Scale</strong><span>Built for growth</span></div>
+          <a class="primary-btn" href="#solutions">Explore Solutions <span>→</span></a>
+          <a class="secondary-btn" href="#contact">Talk to Us <span>→</span></a>
         </div>
       </div>
-
-      <div class="hero-visual reveal visible" aria-hidden="true">
-        <div class="sphere">
-          <span class="sphere-core">K</span>
-          <span class="pulse-node node-a"></span><span class="pulse-node node-b"></span><span class="pulse-node node-c"></span>
+      <div class="ticker-wrap" aria-label="Technology ecosystem">
+        <div class="ticker-label">Built to work with the tools modern businesses use</div>
+        <div class="ticker">
+          <div class="ticker-set">
+            <div class="tech-logo"><span>M</span>Microsoft 365</div><div class="tech-logo"><span>O</span>Outlook</div><div class="tech-logo"><span>T</span>Teams</div><div class="tech-logo"><span>S</span>SharePoint</div><div class="tech-logo"><span>A</span>AWS</div><div class="tech-logo"><span>AI</span>OpenAI</div><div class="tech-logo"><span>SB</span>Supabase</div><div class="tech-logo"><span>GH</span>GitHub</div><div class="tech-logo"><span>CF</span>Cloudflare</div>
+          </div>
+          <div class="ticker-set" aria-hidden="true">
+            <div class="tech-logo"><span>M</span>Microsoft 365</div><div class="tech-logo"><span>O</span>Outlook</div><div class="tech-logo"><span>T</span>Teams</div><div class="tech-logo"><span>S</span>SharePoint</div><div class="tech-logo"><span>A</span>AWS</div><div class="tech-logo"><span>AI</span>OpenAI</div><div class="tech-logo"><span>SB</span>Supabase</div><div class="tech-logo"><span>GH</span>GitHub</div><div class="tech-logo"><span>CF</span>Cloudflare</div>
+          </div>
         </div>
-        <div class="float-card fc1"><div class="icon">✦</div><b>AI-Enabled</b><p>Practical intelligence designed around real business work.</p></div>
-        <div class="float-card fc2"><div class="icon">↗</div><b>Built to Scale</b><p>Flexible digital foundations that can evolve with your business.</p></div>
-        <div class="float-card fc3"><div class="icon">⌘</div><b>Web, App & Software</b><p>Modern digital products built around your goals and users.</p></div>
+      </div>
+    </section>
+
+    <section class="intro-section" id="about">
+      <div class="container intro-inner reveal">
+        <div class="section-label">The KAI-TEQ Ecosystem</div>
+        <h2>Your business. Your systems. <span class="gradient-text">One intelligent team.</span></h2>
+        <p>KAI-TEQ brings practical AI into everyday business operations. A Manager Agent coordinates specialist agents, keeps work moving and gives the business owner visibility without requiring them to manage every administrative task.</p>
+        <div class="ecosystem">
+          <div class="eco-flow">
+            <div class="eco-node"><b>Business Owner</b><small>Goals, approvals, priorities and oversight</small></div>
+            <div class="eco-arrow">→</div>
+            <div class="eco-node eco-manager"><b>Manager Agent</b><small>Coordinates work, delegates tasks and reports what matters</small></div>
+            <div class="eco-arrow">→</div>
+            <div class="eco-node"><b>Specialist Agent Team</b><div class="agent-mini"><span>Admin</span><span>Finance</span><span>Sales</span><span>Marketing</span><span>Support</span><span>Research</span></div></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -220,7 +274,7 @@
       </div>
     </section>
 
-    <section class="section approach" id="about">
+    <section class="section approach" id="approach">
       <div class="container approach-grid">
         <div class="reveal">
           <div class="section-label">Our Approach</div>
