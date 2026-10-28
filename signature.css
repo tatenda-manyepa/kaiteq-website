@@ -1,0 +1,57 @@
+/* Signature story: one visual language and one deliberate pass. */
+.hero{background:linear-gradient(115deg,#fff 25%,#f7faff 65%,#f1f4fc 100%)!important}
+.hero>.story{background:radial-gradient(ellipse at 50% 58%,#e6efff 0,rgba(242,246,255,.5) 52%,transparent 75%)!important;isolation:isolate}
+.hero .chapter-title{font-size:clamp(27px,2.25vw,35px);line-height:1.15;font-weight:500;white-space:normal;max-width:430px}
+.hero .chapter-number{color:#75829b;font-size:9px;letter-spacing:.2em;margin-bottom:13px}
+.hero .chapter-description{font-size:12px;max-width:335px;margin-top:12px}
+.hero .story .ai-hero-story{inset:125px 0 15px!important}
+.hero .story .ai-workspace{overflow:visible!important}
+.hero .story .chaos-items,.hero .story.scene-simplify .chaos-items{position:absolute!important;inset:42px 22px 44px!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,1fr);gap:14px;transform:none!important;translate:none!important;scale:1!important;perspective:none!important}
+.hero .story .chaos-items:before,.hero .story .chaos-items:after{display:none!important}
+.hero .story .chaos-items .outcome{position:relative!important;inset:auto!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;min-width:0!important;max-width:none!important;margin:0!important;padding:17px 15px!important;border:1px solid #dbe4f3!important;border-radius:12px!important;background:rgba(255,255,255,.94)!important;box-shadow:0 8px 22px rgba(24,50,101,.055)!important;transform:none!important;rotate:none!important;translate:none!important;scale:1!important;opacity:0!important;filter:none!important;display:grid!important;grid-template-columns:29px 1fr;column-gap:10px;align-content:center!important;white-space:normal!important;text-align:left!important;color:#193354!important;transition:none!important;animation:none!important}
+.hero .story .chaos-items .outcome:before,.hero .story .chaos-items .outcome:after{display:none!important}
+.hero .story .chaos-items .outcome b{font:500 12px/1.35 Manrope,Arial,sans-serif!important;letter-spacing:-.015em!important;grid-column:2;color:#193354!important;text-shadow:none!important}
+.hero .story .chaos-items .outcome small{font:400 10px/1.5 'DM Sans',Arial,sans-serif!important;grid-column:2;color:#7b899e!important;margin:5px 0 0!important;white-space:normal!important}
+.task-icon{grid-column:1;grid-row:1/3;align-self:center;width:27px;height:27px;padding:5px;border:1px solid #e1e7f6;border-radius:7px;background:#f3f6ff;fill:none;stroke:#6076c5;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.hero .story.scene-simplify .chaos-items .outcome{animation:taskArrange 1.5s cubic-bezier(.16,1,.3,1) both!important;animation-delay:calc(var(--order)*.12s)!important}
+.hero .story .outcome:nth-child(1){--order:0;--start-x:-25px;--start-y:-15px;--collect-x:100px;--collect-y:110px}
+.hero .story .outcome:nth-child(2){--order:1;--start-x:25px;--start-y:-15px;--collect-x:-100px;--collect-y:110px}
+.hero .story .outcome:nth-child(3){--order:2;--start-x:-30px;--start-y:0px;--collect-x:100px;--collect-y:0px}
+.hero .story .outcome:nth-child(4){--order:3;--start-x:30px;--start-y:0px;--collect-x:-100px;--collect-y:0px}
+.hero .story .outcome:nth-child(5){--order:4;--start-x:-25px;--start-y:15px;--collect-x:100px;--collect-y:-110px}
+.hero .story .outcome:nth-child(6){--order:5;--start-x:25px;--start-y:15px;--collect-x:-100px;--collect-y:-110px}
+@keyframes taskArrange{from{opacity:0;transform:translate(var(--start-x),var(--start-y)) scale(.96)}to{opacity:1;transform:none}}
+.hero .story.scene-automate .chaos-items .outcome{animation:taskCollect .9s cubic-bezier(.5,0,.3,1) both!important;animation-delay:calc(var(--order)*.065s)!important}
+@keyframes taskCollect{0%{opacity:1;transform:none}75%{opacity:.35}100%{opacity:0;transform:translate(var(--collect-x),var(--collect-y)) scale(.15)}}
+.hero .story .automation-engine{filter:none!important;transition:opacity 1s ease,transform 1.2s cubic-bezier(.16,1,.3,1)!important}
+.hero .story.scene-automate .automation-engine{width:300px!important;height:300px!important;left:50%!important;top:52%!important;opacity:1!important;animation:engineArrive 1.8s ease both!important;transform:translate(-50%,-50%)!important}
+@keyframes engineArrive{0%,32%{opacity:0;scale:.94}100%{opacity:1;scale:1}}
+.hero .story .engine-rings{border:1px solid #a7bde2!important;background:radial-gradient(circle,rgba(255,255,255,.96) 0 31%,rgba(215,227,250,.36) 32% 62%,transparent 63%)!important;box-shadow:0 0 0 14px rgba(121,149,210,.035)!important;animation:none!important}
+.hero .story .engine-rings i{inset:18px!important;border:1px dashed #afc0e0!important;box-shadow:none!important;animation:signatureOrbit 16s linear infinite!important}
+.hero .story .engine-rings i:nth-child(2){inset:44px!important;border:1px solid #b9b5e5!important;animation:none!important}
+.hero .story .engine-rings i:nth-child(3){inset:70px!important;border:1px solid #d3dff1!important;animation:none!important}
+@keyframes signatureOrbit{to{transform:rotate(360deg)}}
+.hero .story .automation-engine>strong,.hero .story.scene-automate .automation-engine>strong{width:124px!important;height:124px!important;padding:18px!important;border:1px solid #dae4f4!important;outline:0!important;background:linear-gradient(145deg,#fff,#f0f5ff)!important;border-radius:50%!important;color:#193354!important;font:600 10px/1.5 Manrope,Arial,sans-serif!important;letter-spacing:.07em!important;text-shadow:none!important;box-shadow:0 9px 30px rgba(32,62,115,.07)!important}
+.hero .story .automation-engine>strong:before,.hero .story .automation-engine>strong:after{display:none!important}
+.hero .story .automation-engine>em{inset:-20px!important;border:1px solid #e0e7f4!important;box-shadow:none!important}
+.hero .story .engine-gears{inset:0!important;opacity:1!important;filter:none!important}
+.hero .story .engine-gears b{font-size:37px!important;color:#315e9e!important;text-shadow:none!important;left:31px!important;top:47px!important;right:auto!important;bottom:auto!important;animation:signatureOrbit 13s linear infinite!important}
+.hero .story .engine-gears b:nth-child(2){font-size:29px!important;color:#7564be!important;left:auto!important;right:27px!important;top:125px!important;animation-direction:reverse!important}
+.hero .story .engine-gears b:nth-child(3){font-size:25px!important;color:#6583b2!important;left:82px!important;top:auto!important;bottom:29px!important}
+.hero .story .story-person{height:430px!important;width:80%!important;right:10%!important;object-position:center 18%!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 5%,#000 94%,transparent 100%);transition:opacity 1.6s ease,transform 1.6s ease!important}
+.hero .story.scene-settled .chaos-items{display:none!important}
+@media(max-width:1100px) and (min-width:801px){.hero .story .chaos-items{inset:45px 10px 35px!important;gap:10px}.hero .story .chaos-items .outcome{padding:12px 10px!important;grid-template-columns:24px 1fr;column-gap:7px}.hero .story .chaos-items .outcome b{font-size:11px!important}.task-icon{width:24px;height:24px}.hero .story .story-person{height:400px!important}}
+@media(max-width:800px){.hero .chapter-title{font-size:30px}.hero .story .story-person{height:420px!important}.hero .story .chaos-items .outcome b{font-size:12px!important}}
+@media(max-width:480px){.hero .chapter-title{font-size:27px}.hero .chapter-description{max-width:270px;font-size:11px}.hero .story .ai-hero-story{inset:125px 0 10px!important}.hero .story .chaos-items,.hero .story.scene-simplify .chaos-items{inset:30px 5px 30px!important;gap:9px}.hero .story .chaos-items .outcome{padding:12px 9px!important;grid-template-columns:23px 1fr;column-gap:6px;border-radius:9px!important}.hero .story .chaos-items .outcome b{font-size:10px!important}.hero .story .chaos-items .outcome small{font-size:8px!important}.task-icon{width:23px;height:23px}.hero .story.scene-automate .automation-engine{width:250px!important;height:250px!important}.hero .story .automation-engine>strong{width:110px!important;height:110px!important;font-size:9px!important}.hero .story .engine-gears b{left:23px!important;top:31px!important;font-size:31px!important}.hero .story .engine-gears b:nth-child(2){right:15px!important;top:115px!important;font-size:25px!important}.hero .story .engine-gears b:nth-child(3){left:67px!important;bottom:21px!important;font-size:22px!important}.hero .story .story-person{height:365px!important;width:100%!important;right:0!important;object-position:center 13%!important}}
+@media(prefers-reduced-motion:reduce){.hero .story *{animation:none!important;transition:none!important}}
+/* Phase transitions take precedence over the retained legacy animation rules. */
+.hero .story .chaos-items .outcome{animation:none!important;transition:opacity .9s ease,transform 1.2s cubic-bezier(.16,1,.3,1)!important;transition-delay:calc(var(--order)*.08s)!important}
+.hero .story.scene-simplify .chaos-items .outcome{animation:none!important;opacity:1!important;transform:translate(0,0) scale(1)!important}
+.hero .story.scene-automate .chaos-items .outcome{animation:none!important;opacity:0!important;transform:translate(var(--collect-x),var(--collect-y)) scale(.15)!important}
+.hero .story .chaos-items,.hero .story.scene-simplify .chaos-items{height:310px!important;bottom:auto!important;max-height:calc(100% - 60px)!important}
+.hero .story .chaos-items .outcome{min-height:0!important;max-height:none!important}
+.hero .story .chaos-items .outcome b,.hero .story .chaos-items .outcome small{padding-left:0!important}
+.hero .story .engine-rings:before,.hero .story .engine-rings:after{display:none!important}
+@media(max-width:480px){.hero .story .chaos-items,.hero .story.scene-simplify .chaos-items{height:300px!important;max-height:calc(100% - 45px)!important}}
+.hero .story.scene-reset .chaos-items .outcome{opacity:0!important;transform:translate(var(--start-x),var(--start-y)) scale(.96)!important}
+.hero .story .automation-engine:before,.hero .story .automation-engine:after{display:none!important}

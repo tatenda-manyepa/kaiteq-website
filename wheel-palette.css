@@ -1,0 +1,11 @@
+/* Original warm colours and blues; only pink and green are replaced. */
+.hero .story .automation-engine>strong:after{display:none!important;content:none!important}
+.hero .story.scene-simplify .chaos-items .outcome:nth-child(1){background:linear-gradient(145deg,#ffbd52,#ff8525 58%,#e64d22)!important}
+.hero .story.scene-simplify .chaos-items .outcome:nth-child(2){background:linear-gradient(145deg,#9bbfff,#577ff0 58%,#3a56c2)!important}
+.hero .story.scene-simplify .chaos-items .outcome:nth-child(3){background:linear-gradient(145deg,#85d5ff,#399ff0 58%,#246bc5)!important}
+.hero .story.scene-simplify .chaos-items .outcome:nth-child(4){background:linear-gradient(145deg,#65d9ff,#148cd0 58%,#1852ad)!important}
+.hero .story.scene-simplify .chaos-items .outcome:nth-child(5){background:linear-gradient(145deg,#72eee4,#20c4c4 58%,#058baf)!important}
+.hero .story.scene-simplify .chaos-items .outcome:nth-child(6){background:linear-gradient(145deg,#ffe85a,#ffc51f 58%,#e89a13)!important}
+
+/* Keep the animation captions to two clear levels. */
+.hero .story-chapter .chapter-description{display:none!important}

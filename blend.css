@@ -1,0 +1,24 @@
+/* Original connected-work and automation scenes, with a human final frame. */
+.hero{background:linear-gradient(115deg,#fff 25%,#f4f9ff 64%,#ecf1ff 100%)!important;min-height:760px!important;gap:36px!important}
+.hero>.story{position:relative!important;inset:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:100%!important;height:590px!important;align-self:center!important;overflow:hidden!important;border-radius:24px;background:radial-gradient(ellipse at 55% 55%,#e3f0ff 0,rgba(239,246,255,.65) 50%,transparent 76%)}
+.hero .story .ai-hero-story{position:absolute!important;inset:80px 0 25px!important;opacity:1!important;transition:opacity 1.2s ease!important;pointer-events:none}
+.hero .story .ai-glass-panel{background:none!important;border:0!important;box-shadow:none!important;inset:0!important;overflow:visible!important}
+.hero .story .ai-workspace{inset:0!important;opacity:1!important}
+.story-chapter{position:absolute;z-index:20;top:15px;left:20px;right:20px;text-align:center;pointer-events:none}
+.chapter-number{display:block;font-size:10px;font-weight:700;letter-spacing:.19em;color:#5a6acc;margin-bottom:11px}.chapter-title{display:block;font:600 22px/1.25 Manrope,Arial,sans-serif;letter-spacing:-.04em;color:#122a4d}.chapter-description{font-size:12px;line-height:1.6;color:#6c7e99;margin:9px auto 0;max-width:360px}
+.hero .story.scene-simplify .chaos-items{transform:scale(.79)!important;translate:0 0!important;transform-origin:50% 50%!important}
+.hero .story.scene-automate .automation-engine{left:50%!important;top:55%!important;width:370px!important;height:370px!important}
+.hero .story .growth-result,.hero .story .workflow-map,.hero .story .flow-results{display:none!important}
+.hero .story .story-person{position:absolute!important;z-index:10;inset:auto!important;right:0!important;bottom:0!important;width:100%!important;height:470px!important;object-fit:contain!important;object-position:center bottom!important;opacity:0!important;transform:translateY(16px)!important;transition:opacity 1.3s ease,transform 1.3s ease!important;filter:none!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 89%,transparent 100%);pointer-events:none}
+.hero .story.scene-settled .story-person{opacity:1!important;transform:none!important;animation:none!important}
+.hero .story.scene-settled .ai-hero-story{opacity:0!important;visibility:hidden!important;transition:opacity 1.2s ease,visibility 0s 1.2s!important}
+.hero .story.scene-settled:before,.hero .story.scene-welcome:before{display:none!important}
+.hero .story.scene-settled .ai-hero-story *{animation:none!important}
+.hero h1{font-weight:700!important}.hero h1>span{font-weight:700!important}
+@media(min-width:801px) and (max-width:1100px){.hero{gap:20px!important;padding-left:35px!important;padding-right:35px!important}.hero>.story{height:560px!important}.hero .story.scene-simplify .chaos-items{transform:scale(.63)!important}.hero .story.scene-automate .automation-engine{width:310px!important;height:310px!important}.chapter-title{font-size:20px}}
+@media(max-width:800px){.hero{min-height:0!important;gap:32px!important}.hero>.story{height:570px!important;width:100%!important;max-width:580px!important}.hero .story.scene-simplify .chaos-items{transform:scale(.72)!important}.hero .story.scene-automate .automation-engine{width:330px!important;height:330px!important}.story-chapter{top:12px;left:12px;right:12px}.chapter-title{font-size:21px}.hero .story .story-person{height:455px!important}}
+@media(max-width:480px){.hero>.story{height:510px!important;border-radius:16px}.hero .story.scene-simplify .chaos-items{transform:scale(.52)!important}.hero .story.scene-automate .automation-engine{width:270px!important;height:270px!important}.hero .story .ai-hero-story{inset:95px 0 20px!important}.hero .story .story-person{height:390px!important}.chapter-title{font-size:20px}.chapter-description{font-size:11px}.hero .story .chaos-items span{white-space:normal!important}}
+@media(prefers-reduced-motion:reduce){.hero .story .story-person,.hero .story .ai-hero-story{transition:none!important}}
+.hero .story .story-person{object-fit:cover!important;object-position:center 26%!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 80%,transparent 100%)}
+@media(max-width:480px){.hero .story .story-person{object-position:center 20%!important}}
+@media(min-width:801px){.hero .story .story-person{width:80%!important;right:10%!important;object-position:center 22%!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 6%,#000 86%,transparent 100%)}}

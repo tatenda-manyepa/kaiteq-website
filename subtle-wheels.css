@@ -1,0 +1,41 @@
+/* Restore both original wheel scenes, with softer materials and depth. */
+.task-icon{display:none!important}
+.hero .chapter-title{font-size:clamp(27px,2.25vw,35px);line-height:1.15;white-space:normal;max-width:430px}
+.hero .chapter-number{font-size:9px;letter-spacing:.2em;color:#75829b}
+.hero .story .ai-hero-story{inset:125px 0 15px!important}
+.hero .story .ai-workspace{background:none!important}
+.hero .story .ai-glass-panel:before,.hero .story .ai-glass-panel:after{display:none!important}
+.hero .story .chaos-items:after{display:none!important}
+.hero .story .chaos-items .outcome{background:linear-gradient(145deg,#fff,#f2f6fd)!important;border:1px solid #dce5f2!important;border-radius:16px!important;box-shadow:0 5px 16px rgba(35,65,115,.07)!important;color:#263e60!important;filter:none!important;animation:none!important}
+.hero .story .chaos-items .outcome b{color:#263e60!important;text-shadow:none!important;font-weight:500!important}
+.hero .story .chaos-items .outcome small{color:#7a8aa1!important}
+.hero .story .chaos-items .outcome:before{background:#6d87b9!important;box-shadow:0 0 0 4px rgba(109,135,185,.08)!important;border:0!important}
+.hero .story .chaos-items .outcome:nth-child(even):before{background:#8b80bf!important;box-shadow:0 0 0 4px rgba(139,128,191,.08)!important}
+.hero .story.scene-simplify .chaos-items:before{background:radial-gradient(circle at 45% 35%,#fff,#f1f6fe 75%)!important;color:#344f76!important;border:1px solid #d2dff1!important;outline:0!important;text-shadow:none!important;box-shadow:0 8px 25px rgba(35,65,115,.07)!important;animation:none!important;filter:none!important}
+.hero .story .automation-engine{filter:none!important}
+.hero .story.scene-automate .engine-rings{background:radial-gradient(circle,rgba(255,255,255,.94) 0 25%,rgba(153,185,231,.13) 26% 43%,rgba(160,150,207,.06) 44% 55%,transparent 56%)!important;border:1px solid rgba(105,141,192,.28)!important;box-shadow:none!important;animation:wheelTurn 18s linear infinite!important}
+.hero .story .engine-rings:before,.hero .story .engine-rings:after,.hero .story .automation-engine:before,.hero .story .automation-engine:after{display:none!important}
+.hero .story .engine-rings i{border:1px dashed rgba(105,141,192,.3)!important;box-shadow:none!important}
+.hero .story .engine-rings i:nth-child(2){border:1px dotted rgba(139,128,191,.4)!important}
+.hero .story .engine-rings i:nth-child(3){border:1px solid rgba(105,141,192,.2)!important}
+.hero .story.scene-automate .automation-engine>strong{background:radial-gradient(circle at 40% 35%,#fff,#f1f6fd)!important;border:1px solid #d9e4f2!important;outline:0!important;box-shadow:0 8px 24px rgba(35,65,115,.07)!important;text-shadow:none!important;color:#344f76!important}
+.hero .story .automation-engine>strong:before,.hero .story .automation-engine>strong:after{display:none!important}
+.hero .story .automation-engine>em{border:1px solid rgba(105,141,192,.12)!important;box-shadow:none!important}
+.hero .story .engine-gears b{color:#4e7db5!important;text-shadow:none!important;filter:none!important}
+.hero .story .engine-gears b:nth-child(2){color:#8b80bf!important}
+.hero .story .engine-gears b:nth-child(3){color:#7695bd!important}
+.hero .story.scene-settled .story-person{mask-image:linear-gradient(to bottom,transparent 0%,#000 5%,#000 94%,transparent 100%)}
+@keyframes wheelTurn{to{transform:rotate(360deg)}}
+@media(max-width:800px){.hero .chapter-title{font-size:30px}}
+@media(max-width:480px){.hero .chapter-title{font-size:27px}.hero .story .ai-hero-story{inset:135px 0 0!important}}
+@media(prefers-reduced-motion:reduce){.hero .story *{animation:none!important;transition:none!important}}
+.hero .story.scene-simplify .chaos-items .outcome{width:210px!important;height:88px!important;min-height:88px!important;padding:16px!important;--orbit-radius:174px;transform:translate(-50%,-50%) rotate(var(--orbit-start)) translateY(calc(-1 * var(--orbit-radius))) rotate(var(--orbit-counter))!important}
+.hero .story.scene-simplify .chaos-items .outcome b{font-size:12px!important;padding-left:12px!important}.hero .story.scene-simplify .chaos-items .outcome small{font-size:10px!important;padding-left:12px!important}
+.hero .story.scene-simplify .chaos-items:before{display:grid!important;place-items:center!important;position:absolute!important;left:50%!important;top:52%!important;width:145px!important;height:145px!important;border-radius:50%!important;transform:translate(-50%,-50%)!important;font-size:12px!important;line-height:1.4!important;letter-spacing:.05em!important;text-align:center!important;white-space:pre-line!important;content:'CONNECTED\A INTELLIGENCE'!important}
+.hero .story.scene-simplify .chaos-items:after{display:block!important;position:absolute!important;left:50%!important;top:52%!important;width:348px!important;height:348px!important;border:1px solid #d2ddf0!important;border-radius:50%!important;background:none!important;filter:none!important;opacity:.65!important;animation:none!important;box-shadow:none!important;transform:translate(-50%,-50%)!important;z-index:0!important}
+.hero .story .outcome:nth-child(1){--wheel-x:0px;--wheel-y:-174px}.hero .story .outcome:nth-child(2){--wheel-x:151px;--wheel-y:-87px}.hero .story .outcome:nth-child(3){--wheel-x:151px;--wheel-y:87px}.hero .story .outcome:nth-child(4){--wheel-x:0px;--wheel-y:174px}.hero .story .outcome:nth-child(5){--wheel-x:-151px;--wheel-y:87px}.hero .story .outcome:nth-child(6){--wheel-x:-151px;--wheel-y:-87px}
+.hero .story.scene-simplify .chaos-items .outcome{left:50%!important;top:52%!important;transform:translate(calc(-50% + var(--wheel-x)),calc(-50% + var(--wheel-y)))!important;scale:1!important;rotate:none!important;translate:none!important}
+.hero .story.scene-simplify .chaos-items .outcome{transition:opacity .8s ease!important}
+.hero .story .chaos-items .outcome:after{display:none!important}
+.hero .story.scene-simplify .chaos-items .outcome b{display:block!important;width:100%!important;max-width:none!important;padding:0!important;text-align:center!important;font-size:14px!important;line-height:1.3!important;letter-spacing:-.01em!important}
+.hero .story.scene-simplify .chaos-items .outcome small{display:block!important;width:100%!important;max-width:none!important;padding:0!important;text-align:center!important;font-size:11px!important;line-height:1.45!important}

@@ -1,0 +1,286 @@
+/* A centred, four-scene product presentation. */
+.animation-section .animation-stage.hero{display:block!important;min-height:650px!important;padding:0!important}
+.presentation-caption{text-align:center;position:relative;z-index:12;min-height:90px}
+.presentation-caption p{font-size:11px;letter-spacing:.18em;color:#647ba2;margin:0 0 12px}
+.presentation-caption h3{font:600 clamp(23px,2.6vw,34px)/1.25 Manrope,Arial,sans-serif;letter-spacing:-.04em;color:#176ac7;margin:0}
+.animation-section .animation-stage.hero>.story{margin:0 auto!important;max-width:1100px!important;height:560px!important;border-radius:0!important}
+.animation-section .hero .story.scene-simplify .chaos-items{transform:scale(.88)!important}
+.animation-section .hero .story.scene-automate .automation-engine{top:50%!important;width:410px!important;height:410px!important}
+.animation-section .hero .story.scene-grow .growth-result{display:grid!important;inset:0 8% 8%!important;opacity:1!important;transform:none!important}
+.animation-section .hero .story .growth-result>strong{display:none!important}
+.animation-section .hero .story.scene-forward .ai-hero-story{opacity:0!important;visibility:hidden!important}
+.animation-section .hero .story.scene-forward{background:none!important}
+.forward-scene{position:absolute;inset:0;display:grid;align-items:center;padding:20px}
+.forward-scene[hidden]{display:none}
+.forward-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;position:relative}
+.forward-cards:before{content:'';height:1px;background:#b2d4ff;position:absolute;left:5%;right:5%;top:60px}
+.forward-card{display:flex;align-items:flex-start;gap:18px;padding:30px 23px;background:rgba(255,255,255,.94);border:1px solid #bdd6fc;border-radius:24px;box-shadow:0 20px 45px #173d7510;position:relative;opacity:0;transform:translateX(-22px)}
+.scene-forward .forward-card{animation:card-arrive .8s ease forwards}
+.scene-forward .forward-card:nth-child(2){animation-delay:.65s}.scene-forward .forward-card:nth-child(3){animation-delay:1.3s}
+.forward-card b{font:600 20px/1.4 Manrope,Arial,sans-serif;color:#15355e}
+.forward-card em{display:block;font:italic 500 14px/1.5 'DM Sans',Arial,sans-serif;color:#087bff;margin:3px 0 12px}
+.forward-card p{font-size:14px;line-height:1.75;color:#69809d;margin:0}
+.forward-card .objective-icon{flex:0 0 46px;width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#8ddaff,#1685f3,#0646b7);box-shadow:inset 1px 2px 4px #fff9,0 6px 0 #0847aa,0 14px 23px #144eaf25;color:white;display:grid;place-items:center}
+.forward-card svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8}
+.presentation-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;align-items:center;margin:10px auto 25px}
+.scene-navigation,.playback-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.presentation-controls button{font:500 12px 'DM Sans',Arial,sans-serif;border:1px solid transparent;border-radius:30px;padding:10px 15px;color:#657994;background:transparent;cursor:pointer}
+.presentation-controls .scene-button[aria-pressed=true]{color:#1467c6;background:#eaf2ff;border-color:#c7dcfa}
+.presentation-controls button:focus-visible{outline:2px solid #3287ee;outline-offset:3px}
+.presentation-controls #replay-story{border:0;padding:10px 15px}
+.animation-section .story.presentation-paused *{animation-play-state:paused!important}
+@keyframes card-arrive{to{opacity:1;transform:translateX(0)}}
+@media(max-width:800px){.animation-section .hero>.story{max-width:100%!important}.forward-cards{gap:12px}.forward-card{padding:20px 15px;display:block}.forward-card .objective-icon{margin-bottom:18px}.forward-card b{font-size:18px}.forward-card p{font-size:13px}.animation-section .hero .story.scene-grow .growth-result{inset:0 2% 8%!important}}
+@media(max-width:540px){.animation-section .animation-stage.hero{min-height:700px!important}.animation-section .animation-stage.hero>.story{height:610px!important}.animation-section .hero .story.scene-simplify .chaos-items{transform:scale(.5)!important}.animation-section .hero .story.scene-automate .automation-engine{width:280px!important;height:280px!important}.forward-cards{grid-template-columns:1fr;gap:13px}.forward-card{display:flex;padding:18px}.forward-card .objective-icon{margin:0}.forward-card b{font-size:17px}.forward-card em{margin-bottom:5px}.forward-card p{font-size:12px;line-height:1.5}.forward-scene{padding:0}.forward-cards:before{display:none}.presentation-controls{gap:6px}.presentation-controls button{padding:9px 10px;font-size:11px}.animation-section .hero .story.scene-grow .growth-result{width:680px!important;left:50%!important;right:auto!important;transform:translateX(-50%) scale(.49)!important;transform-origin:50% 50%!important;bottom:0!important;top:0!important}}
+@media(prefers-reduced-motion:reduce){.scene-forward .forward-card{opacity:1;transform:none;animation:none!important}}
+
+@media(min-width:541px){.animation-section .hero .story.scene-grow .growth-result{transform:translateY(20px) scale(.9)!important;transform-origin:center center!important}}
+.animation-section .story.presentation-paused .forward-card{opacity:1;transform:none;animation:none!important}
+@media(max-width:540px){
+.animation-section .hero .story.scene-grow .growth-result i{width:80px!important}
+.animation-section .hero .story.scene-grow .growth-result i:nth-child(1){height:110px!important}
+.animation-section .hero .story.scene-grow .growth-result i:nth-child(2){height:160px!important}
+.animation-section .hero .story.scene-grow .growth-result i:nth-child(3){height:220px!important}
+.animation-section .hero .story.scene-grow .growth-result i:nth-child(4){height:280px!important}
+.animation-section .hero .story.scene-grow .growth-result i:nth-child(5){height:340px!important}
+.animation-section .hero .story.scene-grow .growth-result i:nth-child(6){height:400px!important}
+.animation-section .hero .story .growth-result i b{font-size:20px!important;min-width:93px!important}
+.animation-section .hero .story .growth-result>small{font-size:22px!important;line-height:1.4!important}
+}
+
+/* Keep the momentum line above every bar. */
+.animation-section .hero .story .growth-result>em{bottom:53%!important}
+.animation-section .hero .story .growth-result>em:before{content:"BUSINESS MOMENTUM"!important}
+@media(min-width:541px){.animation-section .hero .story.scene-grow .growth-result{transform:translateY(40px) scale(.82)!important}}
+/* A crisp, solid arrowhead that remains legible above the graph. */
+.animation-section .hero .story .growth-result>em{filter:none!important;animation:none!important;box-shadow:0 0 9px rgba(52,130,246,.18)!important;overflow:visible!important}
+.animation-section .hero .story .growth-result>em:after{content:""!important;position:absolute!important;right:-15px!important;top:50%!important;transform:translateY(-50%)!important;width:26px!important;height:26px!important;border:0!important;background:#f58a24!important;clip-path:polygon(0 0,100% 50%,0 100%,22% 50%)!important;filter:none!important;box-shadow:none!important}
+.animation-section .hero .story .growth-result>em:before{right:16px!important}
+
+/* A restrained warm tint connects the final cards to the orange graph. */
+.animation-section .forward-card{background:radial-gradient(ellipse at 50% 25%,rgba(255,137,38,.1536) 0%,rgba(255,137,38,.07) 55%,transparent 100%),#f8faff!important}
+/* Keep the complete desktop presentation within one viewport. */
+@media(min-width:801px){
+ .animation-section.section{height:100svh;min-height:620px;max-height:920px;padding:24px clamp(25px,5vw,80px) 18px!important;display:flex;flex-direction:column;scroll-margin-top:0}
+ .animation-section .demo-heading{margin:0 auto 14px!important;flex:none}
+ .animation-section .demo-heading .eyebrow{margin:0 0 10px!important}
+ .animation-section .demo-heading h2{font-size:clamp(30px,3vw,42px)!important;margin:0!important;line-height:1.18!important}
+ .animation-section .demo-heading>p:last-child{margin:10px 0 0!important}
+ .animation-section .animation-stage.hero{flex:1;min-height:0!important;display:flex!important;flex-direction:column;overflow:hidden!important}
+ .animation-section .presentation-caption{min-height:0;flex:none;padding:0 0 6px}
+ .animation-section .presentation-caption p{margin:0 0 7px;font-size:10px}
+ .animation-section .presentation-caption h3{font-size:clamp(22px,2.2vw,30px)}
+ .animation-section .animation-stage.hero>.story{flex:1;width:100%!important;max-width:1000px!important;height:auto!important;min-height:0!important;margin:0 auto!important}
+ .animation-section .hero .story .ai-hero-story{inset:0!important}
+ .animation-section .presentation-controls{flex:none;margin:8px auto 0!important}
+ .animation-section .hero .story.scene-simplify .chaos-items{transform:scale(.72)!important}
+ .animation-section .hero .story.scene-automate .automation-engine{width:clamp(260px,43vh,380px)!important;height:clamp(260px,43vh,380px)!important}
+ .animation-section .forward-scene{padding:10px 20px}
+ .animation-section .forward-card{padding:24px 20px}
+}
+@media(min-width:801px) and (max-height:760px){
+ .animation-section .hero .story.scene-simplify .chaos-items{transform:scale(.58)!important}
+ .animation-section .hero .story.scene-grow .growth-result{inset:0 8% 0!important;transform:translateY(65px) scale(.65)!important}
+ .animation-section .forward-card{padding:20px 16px;gap:12px}
+}
+@media(min-width:801px) and (min-height:761px){.animation-section .hero .story.scene-simplify .chaos-items{transform:scale(.72)!important}.animation-section .hero .story.scene-grow .growth-result{transform:translateY(50px) scale(.76)!important}}
+@media(min-width:801px){.animation-section .hero .story.scene-grow .growth-result{height:560px!important;inset:50% 8% auto!important;transform:translateY(-50%) scale(.76)!important;transform-origin:center center!important}}
+@media(min-width:801px) and (max-height:760px){.animation-section .hero .story.scene-grow .growth-result{transform:translateY(-50%) scale(.62)!important}}
+@media(min-width:801px){.animation-section.section{height:calc(100svh - 32px);max-height:880px}}
+/* White cards with warm orange icon tiles and blue symbols. */
+.animation-section .forward-card{background:#fff!important}
+.animation-section .forward-card .objective-icon{background:linear-gradient(145deg,#ffbd52 0%,#ff8525 55%,#e64d22 100%)!important;border:1px solid #f58a28!important;color:#4475dc!important;box-shadow:inset 0 1px 2px rgba(255,255,255,.8),0 5px 12px rgba(227,135,38,.1)!important}
+.animation-section .forward-card .objective-icon svg{stroke:#4475dc!important;filter:none!important}
+
+/* Match the card outlines to the orange icon tiles. */
+.animation-section .forward-card{border-color:#f5ae62!important}
+/* Final scene: restrained orange connector and a tighter visual grouping. */
+.animation-section .forward-cards:before{background:linear-gradient(90deg,transparent,rgba(245,150,55,.45) 15%,rgba(245,150,55,.45) 85%,transparent)!important}
+@media(min-width:801px){.animation-section .forward-scene{padding-bottom:clamp(45px,9vh,90px)!important}}
+/* Solutions: clean surfaces with the original icons' restrained depth. */
+#solutions .section-heading{max-width:800px;margin-left:auto;margin-right:auto}
+#solutions .offer-grid{gap:24px!important;align-items:stretch!important}
+#solutions .offer-grid .offer-card{background:#fff!important;border:1px solid #dce6f2!important;border-radius:22px!important;box-shadow:0 12px 32px rgba(21,50,85,.045)!important;padding:32px!important;transform:none!important;display:flex!important;flex-direction:column!important;transition:border-color .25s ease,box-shadow .25s ease!important}
+#solutions .offer-grid .offer-card.featured{background:linear-gradient(145deg,#f0f6ff,#fafdff)!important;border-color:#f1af6a!important;box-shadow:0 12px 32px rgba(21,50,85,.045)!important}
+#solutions .offer-grid .offer-card:hover{box-shadow:0 16px 36px rgba(21,50,85,.075)!important;border-color:#abc9ef!important;transform:none!important}
+#solutions .offer-grid .offer-card.featured:hover{border-color:#ee983e!important;background:linear-gradient(145deg,#f0f6ff,#fafdff)!important}
+#solutions .offer-grid .offer-card .offer-icon{width:54px!important;height:54px!important;border-radius:15px!important;background:linear-gradient(145deg,#91d7ff 0%,#258cf4 45%,#1260c7 100%)!important;border:1px solid #acd7ff!important;box-shadow:inset 2px 2px 4px #ffffff80,inset -2px -3px 5px #0752a033,0 3px 0 #1558aa,0 8px 15px #1451a51a!important;color:white!important;transform:none!important;flex:none}
+#solutions .offer-grid .offer-card .offer-icon svg{stroke:#fff!important;filter:none!important;width:27px!important;height:27px!important}
+#solutions .offer-card h3{font-size:24px!important;margin:25px 0 12px!important;letter-spacing:-.035em!important;line-height:1.3!important}
+#solutions .offer-card .customer-voice{color:#1672e9!important;font-size:15px!important;line-height:1.6!important;margin:0 0 20px!important;min-height:48px}
+#solutions .offer-card>p:not(.customer-voice){font-size:14px!important;line-height:1.75!important;margin:0 0 20px!important;min-height:74px}
+#solutions .offer-card ul{margin:0 0 26px!important;padding-top:20px!important;border-top:1px solid #e8eef5!important;flex:1}
+#solutions .offer-card li{font-size:13px!important;line-height:1.6!important;margin-bottom:9px!important}
+#solutions .offer-grid .offer-card li:before{background:none!important;box-shadow:none!important;border:0!important;color:#2580ed!important}
+#solutions .offer-grid .offer-card>a{margin-top:auto!important;min-height:46px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;padding:12px 18px!important;background:#f5f8fd!important;border:1px solid #e1eaf6!important;border-radius:10px!important;box-shadow:none!important;color:#2268ce!important;font-size:13px!important;font-weight:600!important;transition:background .2s ease!important}
+#solutions .offer-grid .offer-card>a:hover{background:#eaf2ff!important}
+#solutions .offer-card .popular{background:#fff4e6!important;color:#a75a14!important;border:1px solid #f8dbb9!important;box-shadow:none!important;font-size:10px!important;letter-spacing:.08em!important}
+@media(max-width:800px){#solutions .offer-grid .offer-card{padding:26px!important}#solutions .offer-card .customer-voice,#solutions .offer-card>p:not(.customer-voice){min-height:0}}
+/* Package cards lift towards the visitor on hover or keyboard focus. */
+#solutions .offer-grid .offer-card{position:relative;transition:transform .32s cubic-bezier(.2,.75,.25,1),border-color .25s ease,box-shadow .32s ease!important;transform-origin:center center!important}
+#solutions .offer-grid .offer-card.featured{border-color:#dce6f2!important}
+@media(hover:hover) and (pointer:fine){
+ #solutions .offer-grid .offer-card:hover{transform:translateY(-8px) scale(1.025)!important;border-color:#f58a28!important;box-shadow:0 22px 46px rgba(25,57,100,.12),0 0 0 1px rgba(245,138,40,.2)!important;z-index:2}
+}
+#solutions .offer-grid .offer-card:focus-within{transform:translateY(-8px) scale(1.025)!important;border-color:#f58a28!important;box-shadow:0 22px 46px rgba(25,57,100,.12),0 0 0 1px rgba(245,138,40,.2)!important;z-index:2}
+#solutions .offer-grid .offer-card>a:focus-visible{outline:2px solid #176bff;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){#solutions .offer-grid .offer-card{transition:none!important}#solutions .offer-grid .offer-card:hover,#solutions .offer-grid .offer-card:focus-within{transform:none!important}}
+/* Restore the original robot as a quiet part of the process section. */
+#about.journey{background:linear-gradient(135deg,#f8fbff,#f1f7fd)!important;align-items:start!important}
+#about .journey-copy{position:static!important}
+#about .journey-visual{display:block!important;width:min(100%,440px)!important;height:340px!important;margin:26px auto 0!important}
+#about .journey-visual:before{background:radial-gradient(ellipse,rgba(61,150,233,.12),transparent 70%)!important;filter:blur(22px)!important}
+#about .journey-visual>span{background:radial-gradient(ellipse,rgba(255,255,255,.5),transparent 72%)!important}
+#about .journey-visual img,#about .journey-copy.visible .journey-visual img{filter:saturate(.86) drop-shadow(0 12px 20px rgba(30,80,130,.1))!important;transform:none!important;mask-image:linear-gradient(to bottom,#000 0%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 86%,transparent 100%)}
+#about .steps li{border-bottom:1px solid rgba(239,143,52,.3)!important;box-shadow:none!important}
+#about .steps li>span{color:#ed7b24!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important}
+#about .steps li>span:after{background:linear-gradient(90deg,#f58a28,#ffc588)!important;box-shadow:none!important}
+#about .text-link span{color:#ed7b24!important}
+@media(max-width:800px){#about .journey-visual{width:min(100%,380px)!important;height:300px!important;margin:24px auto 0!important}}
+/* Bespoke builds complement the fixed-scope packages. */
+.bespoke-shell{background:#0d1d39;border:1px solid #233854;border-radius:24px;padding:clamp(30px,5vw,70px);display:grid;grid-template-columns:.9fr 1.2fr;gap:clamp(35px,5vw,75px);align-items:center;color:#fff}
+.bespoke-section .bespoke-intro .eyebrow{color:#f5ad65!important}
+.bespoke-intro h2{color:#fff!important;margin:18px 0 24px!important}
+.bespoke-intro>p:not(.eyebrow){font-size:15px;color:#b8c8dd;max-width:470px}
+.bespoke-cta{display:inline-flex;align-items:center;gap:25px;padding:15px 23px;margin-top:22px;background:#fff;border:1px solid #fff;border-radius:10px;color:#102644;font-size:14px;font-weight:600;transition:background .2s,border-color .2s}
+.bespoke-cta span{color:#e8842e}.bespoke-cta:hover{background:#fff2e3;border-color:#f3aa62}.bespoke-cta:focus-visible{outline:3px solid #f3aa62;outline-offset:5px}
+.bespoke-intro .bespoke-note{font-size:12px!important;color:#8fa4bf!important;margin-top:17px}
+.bespoke-label{font-size:13px;color:#c4d2e6;margin:0 0 18px}
+.bespoke-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bespoke-grid article{padding:25px 23px;border:1px solid #31415b;border-radius:15px;background:rgba(255,255,255,.035)}
+.bespoke-number{font-size:12px;letter-spacing:.12em;color:#f5ad65}
+.bespoke-grid h3{font:600 19px/1.35 Manrope,Arial,sans-serif;letter-spacing:-.025em;margin:16px 0 12px;color:#f4f8ff}
+.bespoke-grid p{font-size:13px!important;color:#aebfd5;margin:0}
+.bespoke-grid .bespoke-open{border-color:#31415b;background:rgba(255,255,255,.035)}
+.bespoke-caption{font-size:11px!important;color:#8fa4bf;margin:18px 0 0}
+@media(max-width:1000px){.bespoke-shell{grid-template-columns:1fr}.bespoke-intro>p:not(.eyebrow){max-width:650px}}
+@media(max-width:540px){.bespoke-grid{grid-template-columns:1fr}.bespoke-shell{padding:28px 22px;border-radius:18px}.bespoke-grid article{padding:22px}.bespoke-grid h3{font-size:18px}}
+/* Purpose belongs alongside our approach, without a second closing banner. */
+.why-story .integrated-mission{margin-top:32px;padding-top:28px;border-top:1px solid #dde6f1}
+.why-story .integrated-mission .eyebrow{margin:0 0 12px!important}
+.why-story .integrated-mission h3{font:600 clamp(23px,2.2vw,30px)/1.3 Manrope,Arial,sans-serif;letter-spacing:-.035em;color:#102644!important;background:none!important;-webkit-text-fill-color:initial!important;opacity:1!important;margin:0 0 13px}
+.why-story .integrated-mission h3 span{color:#176bff!important;background:none!important;-webkit-text-fill-color:initial!important}
+.why-story .integrated-mission>p:last-child{font-size:15px!important;line-height:1.8!important;margin:0;color:#647b97}
+/* Balanced editorial layout for purpose and approach. */
+.why.section{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(40px,7vw,110px)!important;align-items:start!important;padding-top:70px!important;padding-bottom:70px!important}
+.why .why-heading h2{max-width:540px;margin:20px 0 0!important;font-size:clamp(30px,3vw,43px)!important;line-height:1.2!important}
+.why .integrated-mission{max-width:520px;margin-top:36px;padding-top:25px;border-top:1px solid #dce6f1}
+.why .integrated-mission .eyebrow{margin:0 0 11px!important}
+.why .integrated-mission h3{font:600 clamp(22px,2vw,28px)/1.35 Manrope,Arial,sans-serif;letter-spacing:-.035em;color:#102644;margin:0 0 12px}
+.why .integrated-mission h3 span{color:#176bff}
+.why .integrated-mission>p:last-child{font-size:14px!important;line-height:1.8!important;margin:0;color:#657b96}
+.why .why-story>p{font-size:16px!important;line-height:1.85!important;margin:0 0 20px!important}
+.why .why-story blockquote{font:500 clamp(24px,2.3vw,32px)/1.4 Manrope,Arial,sans-serif!important;letter-spacing:-.035em!important;border-top:0!important;border-left:2px solid #f4ad64!important;padding:4px 0 4px 23px!important;margin:30px 0 0!important;color:#526780!important}
+.why .why-story blockquote strong{display:block;color:#176bff!important;font-weight:500!important}
+.why .why-story blockquote br{display:none}
+@media(max-width:800px){.why.section{grid-template-columns:1fr!important;gap:30px!important;padding-top:50px!important;padding-bottom:50px!important}.why .why-heading h2{max-width:600px}.why .integrated-mission{max-width:none;margin-top:25px}.why .why-story blockquote{margin-top:24px!important}}
+/* A fresh photographic scene makes the enquiry section feel welcoming. */
+#enquiry .enquiry-person{display:block!important;position:relative!important;width:100%;height:310px;min-height:0!important;margin:24px 0 0!important;overflow:hidden;border-radius:18px}
+#enquiry .enquiry-person img{position:static!important;width:100%!important;max-width:none!important;height:100%!important;object-fit:cover!important;object-position:center 42%!important;filter:none!important;animation:none!important;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 83%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)!important;mask-composite:intersect!important;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 83%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)!important;-webkit-mask-composite:source-in!important}
+#enquiry .enquiry-person:after,#enquiry .enquiry-person-halo{display:none!important}
+@media(max-width:800px){#enquiry .enquiry-person{height:280px;max-width:520px;margin:20px auto 0!important}}
+#enquiry .enquiry-person img{object-position:center center!important;object-fit:contain!important}
+/* Landscape group photo: clear inherited portrait positioning and crop rules. */
+#enquiry .enquiry-copy .enquiry-person{display:block!important;width:100%!important;max-width:640px!important;height:auto!important;aspect-ratio:3/2!important;min-height:0!important;margin:26px 0 0!important;overflow:hidden!important;position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;border-radius:16px!important}
+#enquiry .enquiry-copy .enquiry-person img{display:block!important;position:static!important;inset:auto!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:3/2!important;object-fit:contain!important;object-position:center!important;translate:none!important;margin:0!important;mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%)!important;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%)!important;mask-composite:add!important;-webkit-mask-composite:source-over!important}
+/* Collaboration opens the page; a personal welcome closes it. */
+main>.hero .workspace-backdrop{background-image:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.93) 29%,rgba(255,255,255,.65) 42%,rgba(255,255,255,0) 57%),url('assets/hero-collaboration-corrected.png')!important;background-position:center!important}
+#enquiry .enquiry-copy .enquiry-person{aspect-ratio:16/10!important}
+#enquiry .enquiry-copy .enquiry-person img{height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:90% center!important}
+@media(max-width:800px){main>.hero .workspace-backdrop{background-image:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.99) 41%,rgba(255,255,255,.82) 48%,transparent 60%),url('assets/hero-collaboration-corrected.png')!important;background-size:100% 100%,auto 58%!important;background-position:center,right bottom!important}}
+/* Restore the welcoming portrait with restrained breathing movement. */
+#enquiry .enquiry-copy .enquiry-person{height:350px!important;aspect-ratio:auto!important;max-width:520px!important;margin:24px auto 0!important;overflow:hidden!important;border-radius:0!important}
+#enquiry .enquiry-copy .enquiry-person img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;aspect-ratio:auto!important;transform-origin:50% 85%!important;animation:enquiryGentleBreath 6s ease-in-out infinite!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 83%,transparent 100%),linear-gradient(to right,transparent 0%,#000 12%,#000 85%,transparent 100%)!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 83%,transparent 100%),linear-gradient(to right,transparent 0%,#000 12%,#000 85%,transparent 100%)!important;mask-composite:intersect!important;-webkit-mask-composite:source-in!important}
+@keyframes enquiryGentleBreath{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.012)}}
+@media(max-width:800px){#enquiry .enquiry-copy .enquiry-person{height:300px!important}}
+@media(prefers-reduced-motion:reduce){#enquiry .enquiry-copy .enquiry-person img{animation:none!important;transform:none!important}}
+/* Header action matches the softly squared hero button. */
+.site-header .header-cta{border-radius:9px!important;background:linear-gradient(110deg,#146eff,#6650e9)!important;box-shadow:0 5px 15px rgba(68,87,210,.12)!important;padding:16px 25px!important}
+.site-header .header-cta:before,.site-header .header-cta:after{display:none!important}
+#why-kaiteq{scroll-margin-top:24px}
+/* Reserved movement: one logo entrance and one quiet directional cue. */
+.site-header{position:fixed!important;top:0;left:0;right:0;z-index:100!important;background:rgba(255,255,255,.97)!important;transition:transform .35s ease,opacity .3s ease!important}
+body{padding-top:100px}
+.site-header .brand-logo{transform-origin:left center}
+.site-header.past-opening{transform:translateY(-105%)!important;opacity:0;visibility:hidden;pointer-events:none}
+main>.hero .quiet-link{animation:discoverPulse 4.8s ease-in-out infinite;animation-delay:1.5s}
+main>.hero .quiet-link>span{display:inline-block;animation:discoverArrow 4.8s ease-in-out infinite;animation-delay:1.5s}
+main>.hero .quiet-link:hover,main>.hero .quiet-link:focus-visible,main>.hero .quiet-link:hover>span,main>.hero .quiet-link:focus-visible>span{animation-play-state:paused}
+@keyframes discoverPulse{0%,65%,100%{color:#334566;border-color:#bac8e0}30%{color:#176bff;border-color:#176bff}}
+@keyframes discoverArrow{0%,15%,55%,100%{transform:translateX(0)}30%{transform:translateX(5px)}}
+@media(max-width:800px){body{padding-top:90px}}
+@media(prefers-reduced-motion:reduce){.site-header{transition:none!important}main>.hero .quiet-link,main>.hero .quiet-link>span{animation:none!important}}
+/* A compact, legible close with useful links and a direct contact route. */
+footer.refined-footer{padding:55px clamp(24px,6vw,95px) 24px!important;background:#0d1d39!important;border-top:1px solid #24364f!important}
+.footer-main{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(150px,1fr) minmax(150px,1fr);gap:clamp(30px,6vw,95px);max-width:1440px;margin:auto}
+.refined-footer .footer-brand .brand-logo{width:245px!important;max-width:100%}
+.footer-identity>p{font-size:14px;color:#a9bbd2;margin:16px 0 22px}
+.footer-email{font-size:clamp(17px,1.8vw,23px);color:#f5f8ff;display:inline-flex;align-items:center;gap:12px;border-bottom:1px solid #3a506b;padding-bottom:8px;transition:border-color .2s}
+.footer-email span{color:#f3a65c}.footer-email:hover{border-color:#f3a65c}
+.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.footer-links h3{font:600 11px 'DM Sans',Arial,sans-serif;text-transform:uppercase;letter-spacing:.15em;color:#9bafc9;margin:5px 0 9px}
+.footer-links a{font-size:14px;color:#d0dbeb;transition:color .2s}.footer-links a:hover{color:#ffb76d}
+.refined-footer a:focus-visible{outline:2px solid #f3a65c;outline-offset:5px;border-radius:2px}
+.refined-footer .footer-bottom{max-width:1440px;margin:38px auto 0!important;padding:20px 0 0!important;border-top:1px solid #2a3c55!important;display:flex;justify-content:space-between;gap:18px;color:#91a6c1!important;font-size:11px!important}
+@media(max-width:700px){.footer-main{grid-template-columns:1fr 1fr;gap:30px}.footer-identity{grid-column:1/-1}.refined-footer .footer-bottom{flex-direction:column;gap:8px;margin-top:30px!important}footer.refined-footer{padding-top:38px!important}}
+.enquiry-privacy{font-size:12px!important;color:#71849d;line-height:1.6!important}.enquiry-privacy a{color:#2268ce;text-decoration:underline}.hidden-field{display:none!important}.form-status:empty{display:none}.form-status{font-size:12px;color:#7d561f}
+/* White opening navigation becomes a compact footer-navy bar after the hero. */
+.site-header{transition:background-color .35s ease,height .35s ease,box-shadow .35s ease!important}
+.site-header.navy-header{height:78px!important;background:#0d1d39!important;border-bottom:1px solid #2b3d56!important;box-shadow:0 5px 20px rgba(9,24,45,.12)!important;transform:none!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+.site-header.navy-header nav>a{color:#e6edf8!important}
+.site-header.navy-header nav>a:hover{color:#ffb76d!important}
+.site-header.navy-header .brand-logo{width:225px!important;transition:width .35s ease}
+.site-header.navy-header .menu-button span{background:#f4f7ff!important}
+.site-header.navy-header .header-cta{box-shadow:none!important}
+html{scroll-padding-top:85px}
+@media(max-width:800px){.site-header.navy-header{height:74px!important}.site-header.navy-header .brand-logo{width:190px!important}.site-header.navy-header nav{top:74px!important;background:#0d1d39!important;border-color:#2b3d56!important}.site-header.navy-header nav .mobile-talk{color:#9ebcff!important}}
+@media(prefers-reduced-motion:reduce){.site-header,.site-header.navy-header .brand-logo{transition:none!important}}
+/* Give the presentation the same breathing room and visual weight as its neighbours. */
+.animation-section.section{margin-top:clamp(40px,4vw,70px)!important}
+@media(min-width:801px){
+ .animation-section.section{height:calc(100svh - 96px)!important;min-height:620px;max-height:900px;scroll-margin-top:0!important}
+ .animation-section .demo-heading{max-width:900px!important}
+ .animation-section .demo-heading h2{font-size:clamp(32px,3.3vw,46px)!important}
+ .animation-section .presentation-caption h3{font-size:clamp(24px,2.4vw,33px)!important}
+}
+@media(min-width:801px) and (min-height:850px){
+ .animation-section .hero .story.scene-simplify .chaos-items{transform:scale(.78)!important}
+ .animation-section .hero .story.scene-automate .automation-engine{width:410px!important;height:410px!important}
+ .animation-section .hero .story.scene-grow .growth-result{transform:translateY(-50%) scale(.82)!important}
+}
+@media(max-width:800px){.animation-section.section{margin-top:32px!important}}
+/* Fit a complete, fixed-proportion scene into the stage instead of cropping it. */
+.animation-section .animation-stage.hero{gap:0!important}
+.animation-section .hero .story .ai-hero-story{inset:auto!important;left:50%!important;top:50%!important;width:900px!important;height:640px!important;transform:translate(-50%,-50%) scale(var(--scene-fit,.65))!important;transform-origin:center center!important}
+.animation-section .hero .story .ai-glass-panel{inset:0!important;width:100%!important;height:100%!important;padding:0!important;overflow:visible!important}
+.animation-section .hero .story .ai-workspace{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;overflow:visible!important}
+.animation-section .hero .story.scene-simplify .chaos-items{inset:0!important;width:100%!important;height:100%!important;transform:scale(.9)!important;scale:1!important;translate:0 0!important;transform-origin:center center!important}
+.animation-section .hero .story.scene-automate .automation-engine{width:420px!important;height:420px!important;left:50%!important;top:50%!important}
+.animation-section .hero .story.scene-grow .growth-result{inset:40px 6% 40px!important;width:auto!important;height:560px!important;transform:none!important;translate:none!important}
+@media(max-width:800px){.animation-section .hero .story .ai-hero-story{width:700px!important}}
+
+
+
+/* Final restrained accents and interactive custom examples. */
+.animation-section .forward-card .objective-icon{background:linear-gradient(145deg,#ffda96 0%,#ffb566 55%,#f59b59 100%)!important;border-color:#f4b574!important;box-shadow:inset 0 1px 2px #ffffffb3,0 4px 10px #d98f3010!important}
+.bespoke-grid article{position:relative;transition:transform .28s ease,border-color .28s ease,background .28s ease,box-shadow .28s ease}
+.bespoke-grid article:hover,.bespoke-grid article:focus-within{transform:translateY(-6px) scale(1.025);border-color:#f5ad65;background:rgba(245,153,61,.09);box-shadow:0 15px 32px #00000024;z-index:1}
+.custom-card-link{position:absolute;inset:0;border-radius:15px;z-index:2}
+.custom-card-link:focus-visible{outline:2px solid #f5ad65;outline-offset:4px}
+footer.refined-footer{padding-top:36px!important;padding-bottom:20px!important}
+.footer-identity>p{margin:4px 0 18px!important;color:#c0cddd}
+.refined-footer .footer-bottom{margin-top:27px!important;padding-top:17px!important}
+@media(prefers-reduced-motion:reduce){.bespoke-grid article{transition:none!important}.bespoke-grid article:hover,.bespoke-grid article:focus-within{transform:none}}
+
+/* Phone layouts keep forms readable and presentation spacing compact. */
+@media(max-width:800px){
+ #enquiry.enquiry{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+ #enquiry .enquiry-copy,#enquiry .enquiry-form{width:100%!important;min-width:0!important;max-width:100%!important}
+ #enquiry .enquiry-person{max-width:240px!important;margin:18px auto 0!important}
+ #enquiry .enquiry-form{padding:24px!important}
+ .animation-section .animation-stage.hero{min-height:0!important}
+ .animation-section .animation-stage.hero>.story{height:500px!important;min-height:500px!important}
+ .animation-section .presentation-caption{margin-bottom:12px!important}
+ .animation-section .demo-heading{margin-bottom:22px!important}
+ .animation-section .presentation-controls{margin-top:16px!important}
+}

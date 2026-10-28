@@ -1,0 +1,37 @@
+/* Immediate photographic opening and a dedicated interactive explainer. */
+main>.hero .workspace-backdrop{opacity:1!important;transition:none!important}
+main>.hero{min-height:760px!important}
+.hero-photo-space{height:590px;pointer-events:none}
+main>.hero h1>.hero-second-line{background:none!important;-webkit-text-fill-color:initial!important;color:#0c1c38!important;white-space:nowrap}
+main>.hero h1 .hero-more{color:#0c1c38!important;background:none!important}
+main>.hero h1 .hero-business{background:linear-gradient(100deg,#087bff,#6450e9)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.animation-section{background:#f8faff;border-top:1px solid #e7edf6;scroll-margin-top:30px}
+.demo-heading{max-width:720px;margin:0 auto 30px;text-align:center}
+.demo-heading>p:last-child{font-size:15px;color:#718099}
+.animation-section .animation-stage.hero{display:grid!important;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr)!important;gap:45px!important;padding:0!important;min-height:600px!important;background:transparent!important;overflow:hidden!important;align-items:center!important}
+.animation-section .hero>.story{height:580px!important;background:radial-gradient(ellipse,rgba(223,236,255,.6),transparent 72%)!important}
+.animation-section .hero .story .ai-hero-story{inset:10px 0!important;opacity:1!important;visibility:visible!important}
+.demo-explanation{position:relative;z-index:5;display:grid;gap:15px}
+.explainer-step{display:block;width:100%;text-align:left;border:1px solid transparent;background:transparent;border-radius:12px;padding:23px;cursor:pointer;color:#142b4d;transition:border-color .3s,background .3s}
+.explainer-step[aria-pressed=true]{background:#fff;border-color:#dce5f4;box-shadow:0 8px 30px rgba(30,65,120,.035)}
+.explainer-step>span{display:block;font-size:10px;letter-spacing:.16em;color:#697da0;margin-bottom:11px}
+.explainer-step>strong{display:block;font:600 23px/1.25 Manrope,Arial,sans-serif;letter-spacing:-.035em}
+.explainer-step>p{font-size:14px;color:#6b7e98;margin:12px 0 0;line-height:1.75}
+.demo-controls{display:flex;gap:15px;flex-wrap:wrap;align-items:center;padding:4px 23px}
+#replay-story{border:0;border-bottom:1px solid #bac8df;background:transparent;padding:10px 0;font-size:12px;font-weight:600;color:#294e85;cursor:pointer}
+#replay-story span{margin-left:8px}
+#demo-status{font-size:11px;color:#7b8ba3}
+.explainer-step:focus-visible,#replay-story:focus-visible{outline:3px solid #759aff;outline-offset:4px}
+.demo-footnote{font-size:11px!important;color:#8290a6;text-align:center;margin-top:10px}
+.animation-section .story.playback-complete *{animation-play-state:paused!important}
+.animation-section .story .growth-result,.animation-section .story .workflow-map,.animation-section .story .flow-results{display:none!important}
+/* Softer materials retain the original two wheels and their colours. */
+.animation-section .hero .story .automation-engine{filter:none!important}
+.animation-section .hero .story .chaos-items .outcome{box-shadow:inset 2px 2px 9px rgba(255,255,255,.25),inset -4px -5px 10px rgba(18,62,130,.13),0 5px 0 rgba(20,64,130,.1),0 14px 25px rgba(31,70,130,.1)!important}
+.animation-section .hero .story.scene-simplify .chaos-items:before,.animation-section .hero .story.scene-automate .automation-engine>strong{box-shadow:inset 3px 3px 12px rgba(255,255,255,.6),inset -4px -6px 15px rgba(40,100,190,.1),0 9px 22px rgba(20,65,130,.1)!important;text-shadow:none!important}
+@media(max-width:1000px){.animation-section .animation-stage.hero{gap:15px!important;grid-template-columns:minmax(240px,.9fr) minmax(0,1.1fr)!important}.explainer-step{padding:18px}.explainer-step>strong{font-size:20px}}
+@media(max-width:800px){.hero-photo-space{height:510px}main>.hero{min-height:0!important}.animation-section .animation-stage.hero{grid-template-columns:1fr!important;gap:15px!important;min-height:0!important}.animation-section .hero>.story{height:520px!important;max-width:600px!important;width:100%!important;justify-self:center}.demo-explanation{gap:7px}.explainer-step{padding:16px}.explainer-step>p{font-size:13px}.demo-controls{padding:0 16px}.demo-heading{margin-bottom:22px}.demo-heading h2{font-size:30px!important}}
+@media(prefers-reduced-motion:reduce){.animation-section .story *{animation:none!important;transition:none!important}}
+main>.hero h1 .hero-more{margin-right:.14em}
+.site-header nav .mobile-talk{display:none!important}
+@media(max-width:800px){.site-header nav .mobile-talk{display:block!important;color:#176bff!important;font-weight:600}}

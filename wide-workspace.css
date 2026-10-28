@@ -1,0 +1,10 @@
+/* Full-width final chapter; original two animation scenes stay in place. */
+.hero .workspace-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 30%,rgba(255,255,255,.62) 46%,rgba(255,255,255,.03) 66%),url('assets/hero-collaboration-corrected.png');background-size:cover;background-position:center;opacity:0;transition:opacity 1.8s ease}
+.hero.workspace-visible .workspace-backdrop{opacity:1}
+.hero .hero-copy{position:relative;z-index:4}
+.hero.workspace-visible .story{background:transparent!important}
+.hero.workspace-visible .story-person{display:none!important}
+.hero.workspace-visible .story-chapter{opacity:0;transition:opacity .7s ease}
+@media(max-width:800px){.hero .workspace-backdrop{background-image:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.99) 36%,rgba(255,255,255,.92) 46%,rgba(255,255,255,.08) 65%),url('assets/hero-collaboration-corrected.png');background-size:100% 100%,auto 58%;background-position:center,right bottom;background-repeat:no-repeat;background-color:#fff}.hero.workspace-visible .story-chapter{opacity:1;background:rgba(255,255,255,.83);border-radius:10px;padding:12px;top:0}.hero.workspace-visible .story{overflow:visible!important}}
+@media(prefers-reduced-motion:reduce){.hero .workspace-backdrop,.hero .story-chapter{transition:none!important}}
+@media(max-width:800px){.hero .workspace-backdrop{background-image:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.99) 41%,rgba(255,255,255,.82) 48%,rgba(255,255,255,0) 60%),url('assets/hero-collaboration-corrected.png');background-position:center,80% bottom}.hero.workspace-visible .story-chapter{opacity:0!important;pointer-events:none}}
