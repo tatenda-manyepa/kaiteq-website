@@ -13,3 +13,59 @@
 @media(max-width:800px){.jobdesk-callout{flex-direction:column;align-items:stretch;padding:24px;gap:14px}.package-price strong{font-size:28px}.pricing-footnote{text-align:left}}
 
 @media(min-width:801px){#solutions .offer-card>p:not(.customer-voice){min-height:100px!important}}
+
+/* Align the story with the main heading, below the eyebrow. */
+@media(min-width:801px){#why-kaiteq .why-story{padding-top:62px}}
+
+/* A standalone product feature rather than a plain notice strip. */
+#solutions .jobdesk-callout{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,5vw,80px);padding:clamp(30px,4vw,62px);margin-top:48px;background:linear-gradient(120deg,#d6e4f7 0%,#bfd3ef 52%,#9cbbe5 100%);border-color:#a2bfe3;border-radius:26px;overflow:hidden;box-shadow:0 18px 45px #15345a12}
+#solutions .jobdesk-callout .eyebrow{color:#b6530b!important;font-size:11px;letter-spacing:.13em;margin:0 0 22px}
+#solutions .jobdesk-callout h3{color:#102442;font:600 clamp(27px,2.7vw,42px)/1.2 Manrope,Arial,sans-serif;letter-spacing:-.045em;margin:0 0 22px}
+#solutions .jobdesk-copy>p:not(.eyebrow){color:#425e80;font-size:16px;max-width:570px;line-height:1.8}
+#solutions .jobdesk-copy .jobdesk-independent{font-size:13px!important;color:#526b8b!important;margin-top:18px}
+#solutions .jobdesk-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:25px}
+#solutions .jobdesk-actions a{gap:20px;background:#176bff;color:#fff;padding:16px 22px;border:1px solid #ffffff80;box-shadow:0 8px 24px #0001;transition:transform .2s,border-color .2s}
+#solutions .jobdesk-actions a:hover{transform:translateY(-3px);border-color:#ffb566}
+#solutions .jobdesk-actions a:focus-visible{outline:2px solid #ffbe78;outline-offset:5px}
+#solutions .jobdesk-price{margin:0;color:#425e80;font-size:14px;line-height:1.5}
+#solutions .jobdesk-price strong{font-size:25px;color:#102442;font-weight:600}
+#solutions .jobdesk-price span{display:block;color:#425e80;font-size:14px}
+.jobdesk-visual{width:100%;max-width:460px;justify-self:center}
+.jobdesk-chat{padding:24px 26px 0;background:#f6f9ff;border:1px solid #dbe6fa;border-radius:21px;box-shadow:0 18px 45px #00112c25}
+.jobdesk-chat-header{display:flex;align-items:center;gap:12px;margin-bottom:23px;color:#15365f}
+.jobdesk-chat-header b{display:block;font-size:14px;font-weight:600}
+.jobdesk-chat-header small{display:block;font-size:11px;color:#7187a3;margin-top:3px}
+.jd-icon{display:grid;place-items:center;width:36px;height:36px;background:#e3edff;border-radius:11px;color:#176bff;font-size:21px}
+#solutions .jobdesk-callout .jd-bubble{font-size:13px;color:#244565;line-height:1.6;padding:13px 16px;margin:12px 0;border-radius:14px;max-width:85%}
+#solutions .jobdesk-callout .jd-bubble.customer{background:#fff;border:1px solid #e0e8f5;border-bottom-left-radius:3px}
+#solutions .jobdesk-callout .jd-bubble.assistant{background:#e3eeff;margin-left:auto;border-bottom-right-radius:3px}
+.jd-flow{display:flex;justify-content:center;align-items:center;gap:10px;color:#e9a55e;padding:8px 0 12px;font-size:23px}
+.jd-flow span{width:30px;height:1px;background:#e7c8a5}
+.jobdesk-booking{display:flex;align-items:center;gap:16px;background:#fff;padding:22px;border:1px solid #e1e9f6;border-radius:16px;margin:14px -10px 0 26px;box-shadow:0 12px 30px #00162f22;color:#16375e}
+.jd-calendar{display:grid;place-items:center;flex:0 0 44px;height:46px;border:1px solid #ffd196;background:#fff2dd;border-radius:12px;color:#d58026;font-size:24px}
+.jobdesk-booking small{display:block;font-size:9px;letter-spacing:.16em;color:#7991ad;margin-bottom:6px}
+.jobdesk-booking b{font-size:15px;font-weight:600}
+#solutions .jobdesk-callout .jobdesk-booking p{font-size:10px;color:#748ba6;margin:6px 0 0}
+#solutions .jobdesk-callout .jd-illustration{text-align:center;color:#526b8b;font-size:10px;margin:14px 0 0}
+@media(max-width:800px){#solutions .jobdesk-callout{grid-template-columns:1fr;padding:28px;gap:30px;margin-top:30px}.jobdesk-visual{max-width:440px}.jobdesk-booking{margin-left:15px;margin-right:0;padding:18px}.jobdesk-chat{padding:20px 18px 0}#solutions .jobdesk-actions{gap:18px}#why-kaiteq .why-story{padding-top:0}}
+@media(prefers-reduced-motion:reduce){#solutions .jobdesk-actions a{transition:none}#solutions .jobdesk-actions a:hover{transform:none}}
+
+/* Enquiry-to-booking sequence, with a reading pause between cycles. */
+@media(prefers-reduced-motion:no-preference){
+ .jobdesk-visual.jd-ready .jd-bubble,.jobdesk-visual.jd-ready .jd-flow,.jobdesk-visual.jd-ready .jobdesk-booking{opacity:0}
+ .jobdesk-visual.jd-playing .jd-bubble.customer{animation:jd-arrive .55s ease-out .15s both}
+ .jobdesk-visual.jd-playing .jd-bubble.assistant{animation:jd-arrive .55s ease-out 1.15s both}
+ .jobdesk-visual.jd-playing .jd-flow{animation:jd-arrive .5s ease-out 2s both}
+ .jobdesk-visual.jd-playing .jobdesk-booking{animation:jd-arrive .65s ease-out 2.65s both}
+ .jobdesk-visual.jd-playing .jd-calendar{animation:jd-confirm .65s ease-out 3.2s both}
+}
+@keyframes jd-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes jd-confirm{0%,100%{transform:scale(1)}45%{transform:scale(1.08);background:#ffe1ad}}
+
+@media(prefers-reduced-motion:no-preference){
+ .bespoke-grid article.auto-highlight{transform:translateY(-6px) scale(1.025);border-color:#f5ad65;background:rgba(245,153,61,.09);box-shadow:0 15px 32px #00000024;z-index:1}
+}
+
+/* Keep hover and clicks from competing with the four-card demonstration. */
+.bespoke-grid.sequence-playing article,
+.bespoke-grid.sequence-playing article *{pointer-events:none!important}

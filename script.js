@@ -88,3 +88,71 @@ enquiryForm.addEventListener('submit',event=>{
  document.getElementById('form-status').textContent='Your email app will open. Review and send the message there; the website has not sent it automatically.';
  window.location.href=`mailto:hello@kai-teq.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+
+// Run section demonstrations only while visible. Returning starts a fresh cycle.
+(() => {
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ if(!('IntersectionObserver' in window))return;
+ const setup=(element,play,clear,period,interactive=false)=>{
+  if(!element)return;
+  let visible=false,timer=null,interacting=false;
+  const stop=()=>{clearInterval(timer);timer=null;clear();};
+  const sync=()=>{
+   stop();
+   if(!visible || document.hidden || reduced.matches || interacting)return;
+   play(true);timer=setInterval(()=>play(false),period);
+  };
+  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.25}).observe(element);
+  document.addEventListener('visibilitychange',sync);
+  reduced.addEventListener('change',sync);
+  if(interactive){
+   const update=()=>{interacting=element.matches(':hover') || element.contains(document.activeElement);sync();};
+   element.addEventListener('pointerenter',update);
+   element.addEventListener('pointerleave',update);
+   element.addEventListener('focusin',update);
+   element.addEventListener('focusout',()=>setTimeout(update,0));
+  }
+ };
+ const visual=document.querySelector('.jobdesk-visual');
+ setup(visual,()=>{
+  visual.classList.remove('jd-playing');
+  visual.classList.add('jd-ready');
+  void visual.offsetWidth;
+  visual.classList.add('jd-playing');
+ },()=>visual.classList.remove('jd-ready','jd-playing'),8000);
+ const grid=document.querySelector('.bespoke-grid');
+ const cards=grid?[...grid.querySelectorAll('article')]:[];
+ let active=-1,visible=false,completed=false,timer=null;
+ const clearCards=()=>cards.forEach(card=>card.classList.remove('auto-highlight'));
+ const stopCards=()=>{clearInterval(timer);timer=null;clearCards();};
+ const lockCards=locked=>{
+  grid?.classList.toggle('sequence-playing',locked);
+  cards.forEach(card=>{card.inert=locked;});
+ };
+ const syncCards=()=>{
+  stopCards();
+  lockCards(visible && !completed && !reduced.matches);
+  if(!grid || !visible || completed || document.hidden || reduced.matches)return;
+  if(active<0)active=0;
+  cards[active]?.classList.add('auto-highlight');
+  timer=setInterval(()=>{
+   clearCards();
+   active++;
+   if(active>=cards.length){completed=true;stopCards();lockCards(false);return;}
+   cards[active].classList.add('auto-highlight');
+  },1000);
+ };
+ if(grid && cards.length){
+  new IntersectionObserver(entries=>{
+   const entered=entries[0].isIntersecting;
+   if(entered===visible)return;
+   visible=entered;
+   if(!visible){active=-1;completed=false;}
+   syncCards();
+  },{threshold:0}).observe(grid);
+  document.addEventListener('visibilitychange',syncCards);
+  reduced.addEventListener('change',syncCards);
+  // Pointer and keyboard interactions resume only after the complete pass.
+  lockCards(!reduced.matches);
+ }
+})();
