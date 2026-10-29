@@ -1,0 +1,15 @@
+/* Product pricing and standalone JobDesk; retains the existing brand. */
+.package-price{margin:18px 0 24px;padding:16px 0;border-top:1px solid #dce6f2;border-bottom:1px solid #dce6f2;color:#102442}
+.package-price>span{display:block;font-size:11px;letter-spacing:.06em;color:#94602a}
+.package-price p{margin:6px 0 0!important;line-height:1.5;font-size:16px}
+.package-price strong{font-family:Manrope,sans-serif;font-size:30px;letter-spacing:-.04em}
+.package-price p span{white-space:nowrap}
+.jobdesk-callout{display:flex;align-items:center;justify-content:space-between;gap:32px;margin:36px auto 0;padding:30px 34px;background:#fff;border:1px solid #dce6f2;border-radius:20px}
+.jobdesk-callout h3{font-size:26px;letter-spacing:-.03em;margin:8px 0 12px}
+.jobdesk-callout p{max-width:720px;font-size:15px;line-height:1.7;margin:10px 0;color:#526b8b}
+.jobdesk-callout .eyebrow{font-size:11px;color:#94602a}
+.jobdesk-callout a{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;padding:15px 22px;background:#176bff;color:white;text-decoration:none;border-radius:10px;font-weight:600}
+.pricing-footnote{max-width:1050px;margin:24px auto 0;font-size:13px;line-height:1.8;color:#526b8b}
+@media(max-width:800px){.jobdesk-callout{flex-direction:column;align-items:stretch;padding:24px;gap:14px}.package-price strong{font-size:28px}.pricing-footnote{text-align:left}}
+
+@media(min-width:801px){#solutions .offer-card>p:not(.customer-voice){min-height:100px!important}}

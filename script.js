@@ -67,7 +67,7 @@ showScene(0);syncPause();
 
 const enquiryForm=document.getElementById('enquiry-form');
 const interest=new URLSearchParams(window.location.search).get('interest');
-const interestMap={Launch:'Website package',Business:'Website package',Automate:'Business automation',Custom:'Custom software or product'};
+const interestMap={Launch:'Launch',Business:'Business',Growth:'Growth',Automate:'Growth',JobDesk:'JobDesk standalone',Custom:'Custom Solutions'};
 if(interestMap[interest]){
  enquiryForm.elements.interest.value=interestMap[interest];
  if(interest==='Launch'||interest==='Business')enquiryForm.elements.message.placeholder=`Tell us about your ${interest} requirements…`;
