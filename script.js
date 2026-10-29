@@ -45,7 +45,7 @@ fitPresentationScene();
 
 const phaseButtons=[...document.querySelectorAll('.scene-button')];
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
-const scenes=[['scene-simplify','CONNECT','Bring the moving parts together.',6000],['scene-automate','AUTOMATE','Let the routine take care of itself.',6000],['scene-grow','RESULTS','Clear results your business can measure.',7000],['scene-forward','WAY FORWARD','A clearer way forward.',8500]];
+const scenes=[['scene-simplify','CONNECT','Bring the moving parts together.',3000],['scene-automate','AUTOMATE','Let the routine take care of itself.',3000],['scene-grow','RESULTS','Clear results your business can measure.',3000],['scene-forward','WAY FORWARD','A clearer way forward.',3000]];
 let phase=0,timer,visible=false,paused=motion.matches,remaining=scenes[0][3],deadline=0;
 function stopTimer(){clearTimeout(timer);if(deadline)remaining=Math.max(0,deadline-Date.now());deadline=0;}
 function schedule(){if(paused||!visible||document.hidden)return;deadline=Date.now()+remaining;timer=setTimeout(()=>showScene((phase+1)%scenes.length),remaining);}
@@ -59,7 +59,18 @@ function showScene(next){
  schedule();
 }
 function syncPause(){story.classList.toggle('presentation-paused',paused||!visible||document.hidden);}
-new IntersectionObserver(entries=>{stopTimer();visible=entries[0].isIntersecting;syncPause();schedule();},{threshold:.2}).observe(demo);
+new IntersectionObserver(entries=>{
+ const entry=entries[0];
+ const entered=entry.isIntersecting&&entry.intersectionRatio>=.2;
+ if(entered===visible)return;
+ stopTimer();visible=entered;syncPause();
+ if(visible){
+  // Re-entering always replays the presentation from Connect.
+  story.classList.remove(...scenes.map(scene=>scene[0]));
+  void story.offsetWidth;
+  showScene(0);
+ }
+},{threshold:[0,.2]}).observe(demo);
 phaseButtons.forEach((button,index)=>button.addEventListener('click',()=>showScene(index)));
 document.addEventListener('visibilitychange',()=>{stopTimer();syncPause();schedule();});
 motion.addEventListener('change',()=>{stopTimer();paused=motion.matches;syncPause();schedule();});

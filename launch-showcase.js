@@ -13,7 +13,7 @@
   function update() {
     clearInterval(timer);
     if (!paused && !reduced.matches && visible && !document.hidden)
-      timer = setInterval(() => show((current + 1) % panels.length), 7000);
+      timer = setInterval(() => show((current + 1) % panels.length), 3000);
   }
   buttons.forEach((button, i) => button.addEventListener('click', () => {
     paused = true;
