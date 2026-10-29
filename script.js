@@ -45,7 +45,7 @@ fitPresentationScene();
 
 const phaseButtons=[...document.querySelectorAll('.scene-button')];
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
-const scenes=[['scene-simplify','CONNECT','Bring the moving parts together.',6000],['scene-automate','AUTOMATE','Let the routine take care of itself.',6000],['scene-grow','RESULTS','Clear results your business can feel.',7000],['scene-forward','WAY FORWARD','A clearer way forward.',8500]];
+const scenes=[['scene-simplify','CONNECT','Bring the moving parts together.',6000],['scene-automate','AUTOMATE','Let the routine take care of itself.',6000],['scene-grow','RESULTS','Clear results your business can measure.',7000],['scene-forward','WAY FORWARD','A clearer way forward.',8500]];
 let phase=0,timer,visible=false,paused=motion.matches,remaining=scenes[0][3],deadline=0;
 function stopTimer(){clearTimeout(timer);if(deadline)remaining=Math.max(0,deadline-Date.now());deadline=0;}
 function schedule(){if(paused||!visible||document.hidden)return;deadline=Date.now()+remaining;timer=setTimeout(()=>showScene((phase+1)%scenes.length),remaining);}
